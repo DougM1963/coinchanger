@@ -3,9 +3,16 @@
 <link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<% change_given = change 
+	get_change(change_given) 
+	result = "#{$coins_returned["quarter"]} quarters and #{$coins_returned["dime"]} dimes 
+    and #{$coins_returned["nickel"]} nickels and #{$coins_returned["penny"]} pennies"
+	%>
 <center>
 <div class="cctitle">
 Here is your change 
+<br>
+<%= result %>
 </div>
 <br>
 <img alt="math" src="/img/man5.png" width="500" height="500" />
